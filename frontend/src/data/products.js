@@ -8,6 +8,7 @@ const products = [
     price: 3.5,
     description: 'Fresh dairy milk',
     aliases: ['milk', 'whole milk'],
+    image: 'https://via.placeholder.com/64?text=Milk',
   },
   {
     id: 'prod-2',
@@ -18,6 +19,7 @@ const products = [
     price: 4.2,
     description: 'Organic apples',
     aliases: ['apples', 'organic apples'],
+    image: 'https://via.placeholder.com/64?text=Apples',
   },
   {
     id: 'prod-3',
@@ -28,6 +30,7 @@ const products = [
     price: 2.8,
     description: 'Ripe bananas',
     aliases: ['bananas', 'banana'],
+    image: 'https://via.placeholder.com/64?text=Bananas',
   },
   {
     id: 'prod-4',
@@ -38,6 +41,7 @@ const products = [
     price: 2.1,
     description: 'Soft loaf',
     aliases: ['bread', 'loaf'],
+    image: 'https://via.placeholder.com/64?text=Bread',
   },
   {
     id: 'prod-5',
@@ -48,6 +52,7 @@ const products = [
     price: 4.0,
     description: 'Free range eggs',
     aliases: ['eggs', 'egg'],
+    image: 'https://via.placeholder.com/64?text=Eggs',
   },
   {
     id: 'prod-6',
@@ -58,6 +63,7 @@ const products = [
     price: 1.8,
     description: 'Mineral water',
     aliases: ['water', 'bottle of water'],
+    image: 'https://via.placeholder.com/64?text=Water',
   },
   {
     id: 'prod-7',
@@ -68,6 +74,7 @@ const products = [
     price: 2.4,
     description: 'Fluoride toothpaste',
     aliases: ['toothpaste', 'paste'],
+    image: 'https://via.placeholder.com/64?text=Toothpaste',
   },
   {
     id: 'prod-8',
@@ -78,6 +85,7 @@ const products = [
     price: 3.9,
     description: 'Unsweetened almond milk',
     aliases: ['almond milk', 'plant milk'],
+    image: 'https://via.placeholder.com/64?text=Almond+Milk',
   },
   {
     id: 'prod-9',
@@ -88,6 +96,7 @@ const products = [
     price: 7.2,
     description: 'Boneless chicken breast',
     aliases: ['chicken', 'chicken breast'],
+    image: 'https://via.placeholder.com/64?text=Chicken',
   },
   {
     id: 'prod-10',
@@ -98,6 +107,7 @@ const products = [
     price: 3.1,
     description: 'Long grain rice',
     aliases: ['rice', 'basmati rice'],
+    image: 'https://via.placeholder.com/64?text=Rice',
   },
   {
     id: 'prod-11',
@@ -108,6 +118,7 @@ const products = [
     price: 5.4,
     description: 'Ground coffee',
     aliases: ['coffee', 'ground coffee'],
+    image: 'https://via.placeholder.com/64?text=Coffee',
   },
   {
     id: 'prod-12',
@@ -118,6 +129,7 @@ const products = [
     price: 2.9,
     description: 'Plain yogurt',
     aliases: ['yogurt', 'plain yogurt'],
+    image: 'https://via.placeholder.com/64?text=Yogurt',
   },
   {
     id: 'prod-13',
@@ -128,6 +140,7 @@ const products = [
     price: 2.4,
     description: 'Fresh tomatoes',
     aliases: ['tomatoes', 'tomato'],
+    image: 'https://via.placeholder.com/64?text=Tomatoes',
   },
   {
     id: 'prod-14',
@@ -138,6 +151,7 @@ const products = [
     price: 3.7,
     description: 'Whole grain cereal',
     aliases: ['cereal', 'corn flakes'],
+    image: 'https://via.placeholder.com/64?text=Cereal',
   },
   {
     id: 'prod-15',
@@ -148,6 +162,7 @@ const products = [
     price: 1.9,
     description: 'Liquid hand soap',
     aliases: ['soap', 'hand soap'],
+    image: 'https://via.placeholder.com/64?text=Soap',
   },
 ];
 

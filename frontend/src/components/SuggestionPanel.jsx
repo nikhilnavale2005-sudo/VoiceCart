@@ -4,31 +4,35 @@ function SuggestionPanel({
   title = 'Smart suggestions',
   emptyText = 'Suggestions will appear as you add items.',
   buttonLabel = 'Add',
-  }) {
-    return (
-      <aside className={`suggestion-panel ${className}`.trim()}>
-        <h3>{title}</h3>
-        {suggestions.length === 0 ? (
-          <p style={styles.emptyState}>{emptyText}</p>
-        ) : (
-          <ul className="suggestion-list">
-            {suggestions.map((suggestion) => (
-              <li key={suggestion.id || suggestion.name} className="suggestion-item">
-                <div>
-                  <div style={styles.itemName}>{suggestion.name}</div>
-                  <div className="meta" style={styles.reason}>
-                    {suggestion.reason || `${suggestion.category || 'Product'}${suggestion.price ? ` · $${suggestion.price.toFixed(2)}` : ''}`}
-                  </div>
+  className = '',
+}) {
+  return (
+    <aside className={`suggestion-panel ${className}`.trim()}>
+      <h3>{title}</h3>
+      {suggestions.length === 0 ? (
+        <p style={styles.emptyState}>{emptyText}</p>
+      ) : (
+        <ul className="suggestion-list">
+          {suggestions.map((suggestion) => (
+            <li key={suggestion.id || suggestion.name} className="suggestion-item">
+              {suggestion.image ? (
+                <img src={suggestion.image} alt={suggestion.name} className="thumb" />
+              ) : null}
+              <div style={{ flex: 1 }}>
+                <div style={styles.itemName}>{suggestion.name}</div>
+                <div className="meta" style={styles.reason}>
+                  {suggestion.reason || `${suggestion.category || 'Product'}${suggestion.price ? ` · $${suggestion.price.toFixed(2)}` : ''}`}
                 </div>
-                <button type="button" onClick={() => onAdd(suggestion.name)} className="btn-primary">
-                  {buttonLabel}
-                </button>
-              </li>
-            ))}
-          </ul>
-        )}
-      </aside>
-    );
+              </div>
+              <button type="button" onClick={() => onAdd(suggestion.name)} className="btn-primary">
+                {buttonLabel}
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </aside>
+  );
 }
 
 const styles = {
