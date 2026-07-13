@@ -70,6 +70,8 @@ function Home() {
         name: product.name,
         category: product.category,
         price: product.price,
+        image: product.image,
+        emoji: getCategoryEmoji(product.category),
         reason,
       });
     };
@@ -196,6 +198,21 @@ function Home() {
     if (/bag|rice|flour|cereal/i.test(normalized)) return 'bag';
     if (/box|cereal|cookies/i.test(normalized)) return 'box';
     return 'pcs';
+  };
+
+  const getCategoryEmoji = (category) => {
+    const emojiMap = {
+      Dairy: '🥛',
+      Produce: '🥬',
+      Bakery: '🍞',
+      Household: '🧹',
+      Beverages: '☕',
+      Meat: '🍗',
+      Pantry: '🏪',
+      Breakfast: '🥣',
+      Drinks: '💧',
+    };
+    return emojiMap[category] || '📦';
   };
 
   const normalizeText = (value) =>

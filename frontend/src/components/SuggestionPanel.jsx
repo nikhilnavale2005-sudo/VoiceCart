@@ -15,9 +15,9 @@ function SuggestionPanel({
         <ul className="suggestion-list">
           {suggestions.map((suggestion) => (
             <li key={suggestion.id || suggestion.name} className="suggestion-item">
-              {suggestion.image ? (
-                <img src={suggestion.image} alt={suggestion.name} className="thumb" />
-              ) : null}
+              <div className="thumb-container">
+                <span className="thumb-emoji">{suggestion.emoji || '📦'}</span>
+              </div>
               <div style={{ flex: 1 }}>
                 <div style={styles.itemName}>{suggestion.name}</div>
                 <div className="meta" style={styles.reason}>

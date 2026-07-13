@@ -1,3 +1,5 @@
+import ThemeToggle from './ThemeToggle';
+
 function Header() {
   return (
     <header aria-label="VoiceCart header">
