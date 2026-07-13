@@ -632,10 +632,10 @@ function Home() {
   }, [items, searchQuery]);
 
   return (
-    <div style={styles.page}>
+    <div className="page" style={styles.page}>
       <Header />
-      <div style={styles.card}>
-        <div style={styles.heroSection}>
+      <div className="card" style={styles.card}>
+        <div className="hero" style={styles.heroSection}>
           <div>
             <p style={styles.eyebrow}>Voice-first shopping assistant</p>
             <h2 style={styles.title}>Add items, search fast, and keep your list organized.</h2>
@@ -676,9 +676,10 @@ function Home() {
 
         <TranscriptBox transcript={transcript} statusMessage={statusMessage} error={error} />
 
-        <div style={styles.mainGrid}>
-          <div style={styles.panelColumn}>
+        <div className="main-grid" style={styles.mainGrid}>
+          <div className="panel-column" style={styles.panelColumn}>
             <SuggestionPanel
+              className="available-products"
               title="Available products"
               emptyText="No products match your current search."
               buttonLabel="Add"
@@ -689,7 +690,7 @@ function Home() {
                 )
               }
             />
-            <SuggestionPanel suggestions={suggestions} onAdd={handleSuggestion} />
+            <SuggestionPanel className="smart-suggestions" suggestions={suggestions} onAdd={handleSuggestion} />
           </div>
           <ShoppingList
             items={filteredItems}

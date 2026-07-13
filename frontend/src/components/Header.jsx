@@ -1,12 +1,13 @@
 function Header() {
   return (
-    <header style={styles.header} aria-label="VoiceCart header">
+    <header aria-label="VoiceCart header">
       <div>
         <h1 style={styles.title}>🛒 VoiceCart</h1>
         <p style={styles.subtitle}>
           A lightweight voice shopping assistant for quick list building.
         </p>
       </div>
+      <ThemeToggle />
     </header>
   );
 }

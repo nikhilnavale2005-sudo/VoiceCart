@@ -1,0 +1,60 @@
+:root {
+  --bg: #f8fbff;
+  --card-bg: #ffffff;
+  --muted: #64748b;
+  --primary: #4f46e5;
+  --text: #0f172a;
+  --accent: #eef2ff;
+  --btn-bg: #4f46e5;
+  --btn-color: #ffffff;
+}
+
+[data-theme='dark'] {
+  --bg: #0b1220;
+  --card-bg: #071226;
+  --muted: #94a3b8;
+  --primary: #7c3aed;
+  --text: #e6eef8;
+  --accent: #071227;
+  --btn-bg: #7c3aed;
+  --btn-color: #fff;
+}
+
+* { box-sizing: border-box; }
+html,body,#root { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(135deg, var(--bg) 0%, #eef6ff 100%);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.page { min-height: 100vh; padding: 24px; }
+.card { max-width: 1120px; margin: 0 auto; background: var(--card-bg); border-radius: 20px; padding: 24px; box-shadow: 0 18px 45px rgba(15,23,42,0.06); }
+
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+header h1 { margin: 0; font-size: 1.8rem; }
+header p { margin: 4px 0 0; color: var(--muted); }
+
+.theme-toggle { background: transparent; border: 1px solid rgba(0,0,0,0.06); padding: 8px 12px; border-radius: 999px; cursor: pointer; color: var(--text); }
+
+.hero { display:flex; justify-content: space-between; gap:16px; align-items:center; margin-bottom:20px; }
+.eyebrow { margin:0 0 4px; font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--primary); }
+.subtitle { color:var(--muted); }
+
+.main-grid { display:grid; gap:20px; grid-template-columns: minmax(280px, 360px) 1fr; }
+.panel-column { display:grid; gap:16px; }
+
+.suggestion-panel { background: var(--accent); border-radius: 12px; padding: 14px; }
+.suggestion-panel h3 { margin-top:0; margin-bottom:8px; }
+.suggestion-list { list-style:none; margin:0; padding:0; display:grid; gap:10px; }
+.suggestion-item { display:flex; justify-content:space-between; align-items:center; background:var(--card-bg); padding:10px 12px; border-radius:10px; box-shadow: 0 6px 18px rgba(2,6,23,0.04); }
+.suggestion-item .meta { color: var(--muted); font-size:0.9rem; }
+.btn-primary { border: none; background: var(--btn-bg); color: var(--btn-color); padding:8px 12px; border-radius:999px; cursor:pointer; }
+
+.shopping-list { background: transparent; }
+
+@media (max-width: 900px) {
+  .main-grid { grid-template-columns: 1fr; }
+}
