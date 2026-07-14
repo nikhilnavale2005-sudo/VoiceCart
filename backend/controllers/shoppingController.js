@@ -28,7 +28,12 @@ const getItems = async (req, res) => {
 
         return res.json(memoryItems.slice().sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)));
     } catch (error) {
-        res.status(500).json({ message: "Unable to fetch items." });
+        console.error("GET ITEMS ERROR:", error);
+
+        res.status(500).json({
+            message: "Unable to fetch items.",
+            error: error.message
+        });
     }
 };
 

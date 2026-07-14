@@ -212,7 +212,7 @@ function Home() {
       Breakfast: '🥣',
       Drinks: '💧',
     };
-    return emojiMap[category] || '📦';
+    return emojiMap[category];
   };
 
   const normalizeText = (value) =>

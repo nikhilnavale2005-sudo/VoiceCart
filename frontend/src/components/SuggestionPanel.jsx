@@ -16,7 +16,7 @@ function SuggestionPanel({
           {suggestions.map((suggestion) => (
             <li key={suggestion.id || suggestion.name} className="suggestion-item">
               <div className="thumb-container">
-                <span className="thumb-emoji">{suggestion.emoji || '📦'}</span>
+                <span className="thumb-emoji">{suggestion.emoji }</span>
               </div>
               <div style={{ flex: 1 }}>
                 <div style={styles.itemName}>{suggestion.name}</div>
