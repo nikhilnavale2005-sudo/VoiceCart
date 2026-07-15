@@ -1,64 +1,87 @@
-# Voice Shopping Assistant
+# 🛒 Voice Shopping Assistant
 
-A lightweight voice-first shopping assistant (frontend + backend) that lets you build and manage shopping lists using speech or text.
+A full-stack voice-enabled shopping list application that allows users to manage shopping items using **voice commands** or **text input**. The application supports CRUD operations, smart product suggestions, and is deployed on AWS with HTTPS.
 
-Quick start
+## 🚀 Live Demo
 
-- Install and run the backend:
+**Application:** https://voicecartnikhil.duckdns.org/
 
-```powershell
+## ✨ Features
+
+- 🎤 Voice and text-based shopping list management
+- ➕ Add, update, and delete shopping items
+- 🔍 Search shopping items
+- 📂 Automatic category detection
+- 💡 Smart product suggestions
+- ☁️ Deployed on AWS EC2 with HTTPS
+
+## 🛠️ Tech Stack
+
+**Frontend**
+- React.js
+- Vite
+- Axios
+
+**Backend**
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+
+**Deployment**
+- AWS EC2
+- Nginx
+- PM2
+- DuckDNS
+- Let's Encrypt SSL
+
+## 📦 Local Setup
+
+### Backend
+
+```bash
 cd backend
 npm install
 npm run dev
 ```
 
-- Install and run the frontend:
+### Frontend
 
-```powershell
+```bash
 cd frontend
 npm install
 npm run dev
 ```
 
-Build production frontend
+Visit:
 
-```powershell
+```text
+http://localhost:5173
+```
+
+## 🔧 Production Build
+
+```bash
 cd frontend
 npm run build
 ```
 
-Where to look
+## 📌 API Endpoints
 
-- Frontend pages: [frontend/src/pages/Home.jsx](frontend/src/pages/Home.jsx)
-- Product catalog: [frontend/src/data/products.js](frontend/src/data/products.js)
-- Suggestion UI: [frontend/src/components/SuggestionPanel.jsx](frontend/src/components/SuggestionPanel.jsx)
-- Header component: [frontend/src/components/Header.jsx](frontend/src/components/Header.jsx)
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/items` | Get all items |
+| POST | `/api/items` | Add an item |
+| PUT | `/api/items/:id` | Update an item |
+| DELETE | `/api/items/:id` | Delete an item |
 
-Notes
+## 📖 Approach
 
-- Smart suggestions are generated from the local product catalog and based on recent shopping history, low-stock heuristics, and seasonal picks.
-- If you want stricter linting/formatting, run a formatter such as Prettier and add a config to the repo.
-# Voice Shopping Assistant
+The application uses React for the frontend and Express with MongoDB for the backend. Voice commands are captured using the browser's Speech Recognition API and converted into shopping actions. The backend exposes REST APIs for managing shopping items, while Nginx serves the frontend and PM2 manages the backend on an AWS EC2 instance. HTTPS is enabled using Let's Encrypt to securely support microphone access.
 
-A lightweight voice-first shopping assistant built with Node.js, Express, and React. Users can add or remove items through text or browser voice input, search the current list, and receive smart suggestions based on recent items and seasonal context.
+## 👨‍💻 Author
 
-## Features
-- Voice input with browser speech recognition
-- Multilingual support for English and Spanish commands
-- Add, remove, update, and search shopping items
-- Automatic category inference and quantity handling
-- Smart suggestions and seasonal recommendations
+**Nikhil Navale**
+````
 
-## Run locally
-1. Start the backend:
-   - `cd backend`
-   - `npm install`
-   - `npm run dev`
-2. Start the frontend in a second terminal:
-   - `cd frontend`
-   - `npm install`
-   - `npm run dev`
-3. Open `http://localhost:5173`
-
-## Approach
-The app combines a simple Express API with a React interface so it can work quickly without heavy setup. The browser handles voice recognition, while the backend stores items and serves suggestions. If no MongoDB connection string is provided, the app gracefully falls back to an in-memory store so the experience remains functional during local testing.
+This version is around 70–80 lines, clean, professional, and includes your live deployed application link.
